@@ -11,6 +11,7 @@ const Header = () => {
   };
   const timeoutRef = useRef(null);
 
+  // Khi chuột vào nút hoặc menu, hủy timeout nếu có và hiển thị menu
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -18,10 +19,11 @@ const Header = () => {
     setOpenMenu(true);
   };
 
+  // Khi chuột ra khỏi nút hoặc menu, thiết lập timeout để ẩn menu sau 200ms
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setOpenMenu(false);
-    }, 300); 
+    }, 200); // Thời gian trễ 200ms, bạn có thể điều chỉnh theo nhu cầu
   };
   return (
     <div
@@ -30,7 +32,7 @@ const Header = () => {
         background: "linear-gradient(5deg, #cb1c22 67.61%, #d9503f 95.18%)",
       }}
     >
-      <div className="grid grid-cols-[150px_845px_240px] gap-4 px-5 mx-20  text-white py-2">
+      <div className="grid grid-cols-[150px_1fr_240px] gap-4 px-5 mx-20  text-white py-2">
         <div className="h-full w-36 p-2 ">
           <img
             src="https://cdn2.fptshop.com.vn/unsafe/150x0/filters:quality(100)/small/logo_main_ddc98ef35b.png"

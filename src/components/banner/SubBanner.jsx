@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 
 const SubBanner = () => {
   const slides = [
@@ -18,6 +18,12 @@ const SubBanner = () => {
   const [openButton, setOpenButton] = useState(false);
   const timeoutRef = useRef(null);
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, [currentSlide]);
   // Hàm chuyển sang slide tiếp theo
   const nextSlide = () => {
     setCurrentSlide(currentSlide === totalSlides - 1 ? 0 : currentSlide + 1);
