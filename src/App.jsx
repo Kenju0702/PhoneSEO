@@ -1,5 +1,6 @@
+import Banner from "./components/banner/Banner"
 import Header from "./components/Header"
-import Navigation from "./components/navigation/NavigationModal"
+import MenuSub from "./components/navigation/MenuSub"
 
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
   return (
     <>
       <Header/>
+      <MenuSub/>
+      <Banner/>
        </>
   )
 }

@@ -21,7 +21,7 @@ const Header = () => {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setOpenMenu(false);
-    }, 200); 
+    }, 300); 
   };
   return (
     <div
@@ -30,7 +30,7 @@ const Header = () => {
         background: "linear-gradient(5deg, #cb1c22 67.61%, #d9503f 95.18%)",
       }}
     >
-      <div className="grid grid-cols-[150px_1fr_240px] gap-4 px-5 mx-20  text-white py-2">
+      <div className="grid grid-cols-[150px_845px_240px] gap-4 px-5 mx-20  text-white py-2">
         <div className="h-full w-36 p-2 ">
           <img
             src="https://cdn2.fptshop.com.vn/unsafe/150x0/filters:quality(100)/small/logo_main_ddc98ef35b.png"
