@@ -97,6 +97,7 @@ const Product = () => {
 
   return (
     <div className="max-w-7xl mx-auto py-4">
+        <img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/Banner_3_6a9567d72c.png" alt="" />
       <div
         className="relative w-full"
         onMouseEnter={handleMouseEnter}

@@ -4,6 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
     /* không còn dấu nhấy */
     caret-color: transparent; 
+    box-sizing: border-box;
 
 
 }
