@@ -1,4 +1,5 @@
 import Banner from "./components/banner/Banner"
+import { Footer } from "./components/Footer"
 import Header from "./components/Header"
 import MenuSub from "./components/navigation/MenuSub"
 import { PhoneProduct } from "./components/PhoneProduct/PhoneProduct"
@@ -16,6 +17,7 @@ function App() {
       <Product/>
       <PhoneProduct/>
       <Promotion/>
+      <Footer/>
        </>
   )
 }

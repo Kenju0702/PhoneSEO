@@ -7,13 +7,13 @@ const SubBanner = () => {
     "https://cdn2.fptshop.com.vn/unsafe/640x0/filters:quality(100)/H2_614x212_01f767bd39.png",
     "https://cdn2.fptshop.com.vn/unsafe/640x0/filters:quality(100)/H2_614x212_01f767bd39.png",
   ];
+  //[]
 
   // Mỗi ảnh chiếm 50% => hiển thị 2 ảnh trong 1 view
   const visibleImages = 2;
   // Cho slider chạy từ 0 đến (số ảnh - số ảnh hiển thị)
   const maxIndex = images.length - visibleImages; // 4 - 2 = 2
 
-  // currentIndex biểu diễn số lượng ảnh dịch chuyển (1 ảnh = dịch 50%)
   const [currentIndex, setCurrentIndex] = useState(0);
   const [openButton, setOpenButton] = useState(false);
   const timeoutRef = useRef(null);

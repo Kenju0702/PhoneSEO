@@ -199,7 +199,7 @@ export const PhoneProduct = () => {
           </li>
         </ul>
       </div>
-      <div className="mt-4 grid grid-cols-4 gap-4">
+      <div className="mt-4 grid grid-cols-5 gap-4">
         {fakeDataArray.map((item, index) => (
           <ItemPhone key={index} {...item} />
         ))}
