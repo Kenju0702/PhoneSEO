@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Footer = () => {
+export const FooterPage = () => {
   return (
 <footer className="bg-gray-300  shadow  ">
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">

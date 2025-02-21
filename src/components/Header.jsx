@@ -83,12 +83,12 @@ const Header = () => {
       <div>
         <ul className="flex justify-center gap-4 text-white">
           <li className="h-full">
-            <a href="" className="p-4 block ">
+            <a href="/" className="p-4 block ">
               Iphone
             </a>
           </li>
           <li className="h-full">
-            <a href="" className="p-4 block ">
+            <a href="/product" className="p-4 block ">
               Samsung
             </a>
           </li>
