@@ -22,6 +22,9 @@ export const FooterPage = () => {
                 <li>
                     <a href="#" className="hover:underline">Contact</a>
                 </li>
+                <li>
+                    <a href="#" className="hover:underline">Cointcard</a>
+                </li>
             </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
