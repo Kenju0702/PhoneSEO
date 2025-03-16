@@ -3,13 +3,25 @@ import {FaUserCircle, FaSearch} from "react-icons/fa";
 import {IoMdCart} from "react-icons/io";
 import {IoMenuSharp} from "react-icons/io5";
 import Navigation from "./navigation/NavigationModal";
-
+import { useNavigate } from "react-router-dom";
+import LoginForm from "./Login/Login";
+import Cart from "./Cart/Cart";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const toggleMenu = () => {
     setOpenMenu((prevState) => !prevState);
   };
   const timeoutRef = useRef(null);
+
+  const navigate = useNavigate(); // Đặt useNavigate ở đầu Header
+
+  const handleLoginClick = () => {
+    navigate("/Login"); // Điều hướng đến trang LoginForm
+  };
+
+  const cart_click =()=>{
+    navigate("/cart")
+  }
 
   // Khi chuột vào nút hoặc menu, hủy timeout nếu có và hiển thị menu
   const handleMouseEnter = () => {
@@ -18,6 +30,8 @@ const Header = () => {
     }
     setOpenMenu(true);
   };
+
+
 
   // Khi chuột ra khỏi nút hoặc menu, thiết lập timeout để ẩn menu sau 200ms
   const handleMouseLeave = () => {
@@ -70,10 +84,12 @@ const Header = () => {
 
         <div className="user flex gap-4  items-center p-2  ">
           <button className="w-10 h-10 rounded-full bg-red-900  flex items-center justify-center">
-            <FaUserCircle className="text-2xl" />
+            <FaUserCircle className="text-2xl"   onClick={handleLoginClick}/>
           </button>
           <div className="cart">
-            <button className="py-2.5 px-4 bg-black w-32 flex gap-0.5 items-center text-center content-center rounded-2xl">
+            <button className="py-2.5 px-4 bg-black w-32 flex gap-0.5 items-center text-center content-center rounded-2xl"
+            onClick={cart_click}
+            >
               <IoMdCart />
               Giỏ Hàng
             </button>
@@ -81,7 +97,7 @@ const Header = () => {
         </div>
       </div>
       <div>
-        <ul className="flex justify-center gap-4 text-white">
+        <ul className="flex justify-center gap-4 text-white" >
           <li className="h-full">
             <a href="/" className="p-4 block ">
               Iphone
